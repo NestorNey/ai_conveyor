@@ -1,0 +1,19 @@
+[Unit]
+Description=Servicio de AI Conveyor (UI en Docker y Backend en Host)
+After=network.target docker.service
+Requires=docker.service
+
+[Service]
+User=josnes
+WorkingDirectory=/app/ai_conveyor
+# Agregamos las rutas donde viven uv, docker y los binarios de linux
+Environment="PATH=/home/josnes/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
+# Usamos /usr/bin/bash por si /bin/bash es un enlace simbólico que systemd no resuelve
+ExecStart=/usr/bin/bash /app/ai_conveyor/run.sh
+Restart=always
+RestartSec=10
+StandardOutput=inherit
+StandardError=inherit
+
+[Install]
+WantedBy=multi-user.target
