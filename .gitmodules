@@ -1,0 +1,9 @@
+[submodule "ai_conveyor_api"]
+	path = ai_conveyor_api
+	url = git@github.com:NestorNey/ai_conveyor_api.git
+[submodule "ai_conveyor_lib"]
+	path = ai_conveyor_lib
+	url = git@github.com:NestorNey/ai_conveyor_lib.git
+[submodule "ai_conveyor_ui"]
+	path = ai_conveyor_ui
+	url = git@github.com:NestorNey/ai_conveyor_ui.git
