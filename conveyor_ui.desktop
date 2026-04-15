@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=AI Conveyor UI
+Exec=/bin/bash /app/ai_conveyor/start_browser.sh
+X-GNOME-Autostart-enabled=true
